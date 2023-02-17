@@ -1,0 +1,153 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0rem;
+  background: #f7f7f7;
+  display: grid; /* Definir o display grid no pai possibilita o alinhamento dos dos conteúdos e espaçamentos*/
+  gap: 3.75rem;
+  justify-items: center; /*Com essa justificação os items serão alinhados ao centro*/
+  margin-top: 3.75rem; /*Para dar a distância do conteúdo do BODY*/
+}
+
+header {
+  display: grid;
+  justify-items: center;
+  gap: 3.75rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+ul {
+  list-style: none;
+  display: flex; /*Definir os items como flex retira todas as margens e paddings*/
+  flex-wrap: wrap; /*Faz com que os itens sem quebrem quando a tela é menor*/
+  gap: 1.25rem; /*Sendo então possível a adição de um espaço igual com gap*/
+  justify-content: center; /*Faz com que o conteúdo esteja alinhado ao centro após quebrar*/
+}
+
+a {
+  text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0rem; /*Reseta todas as margens informadas*/
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.nav a {
+  background: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  color: #000;
+  text-transform: uppercase;
+  border: 0.1875rem solid #fff;
+}
+
+.nav a:hover {
+  border: 0.1875rem solid #e21;
+}
+
+.conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 62.5rem; /*Definição do tamanho máximo do conteúdo, lembrando o conteúdo só fica alinhado se o tamanho for maior que o máximo, pois assim ele terá espaço sobrando*/
+}
+
+.introducao {
+  background: #fff;
+  padding: 2.5rem;
+  text-align: right;
+  position: relative;
+  display: grid; /*reorganizando os itens em linhas*/
+  align-content: center; /*alinha o conteúdo ao centro*/
+  gap: 1.25rem; /*Como os elementos se alinham juntos ao centro o gap irá cria um espaçamento igualitário*/
+  justify-items: end; /*Por fim, utiliza-se a justificação dos itens ao final para eles não ficarem esticados dentro do conteúdo*/
+}
+
+.introducao::before {
+  content: "";
+  display: inline-block;
+  width: 3.75rem;
+  height: 0.25rem;
+  background: #900;
+  position: absolute;
+  top: 2rem;
+  right: -2rem;
+  z-index: 1;
+}
+
+.detalhe {
+  width: 3.75rem;
+  height: 0.25rem;
+  background: #e21;
+  display: inline-block; /*Um elemento inline não consegue definir altura e largura, então trasforma-se ele em inline block*/
+  position: absolute; /*A posição leva em conta o elemento pai caso o elemento que segura o item não tenha um posicionamento relativo*/
+  top: 2rem;
+  right: -2rem;
+}
+
+.botao {
+  background: #e21;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.botao:hover {
+  background: #900;
+}
+
+.subtitulo {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.2);
+  padding: 2.5rem;
+  text-align: right;
+  align-self: center; /*Quando é preciso alinha apenas 1 item dentro de um grid usa-se align-self*/
+  background-image: url("./img/onda.svg");
+  background-size: 100%;
+  background-position: center;
+}
+
+.vantagens {
+  background: #fff;
+  padding: 2.5rem;
+}
+
+.vantagens-item {
+  display: grid;
+  grid-template-columns: auto 1fr; /*Com o valor de auto a primeira coluna irá pegar o tamanho da imagem como referencia*/
+  gap: 0.625rem 1.25rem; /*linha e coluna*/
+  padding: 2.5rem;
+  border-left: 0.1875rem solid #fff;
+}
+
+.vantagens-item p {
+  grid-column: 2;
+}
+
+.vantagens-item:hover {
+  border-left: 0.1875rem solid #e21;
+}
+
+.vantagens-item:nth-child(odd) {
+  background: #f7f7f7;
+}
+
+footer {
+  background: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 2.5rem;
+  box-sizing: border-box; /*Retira o comportamento de soma o padding + width 100%*/
+}
