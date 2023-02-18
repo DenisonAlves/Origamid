@@ -151,3 +151,34 @@ footer {
   padding: 2.5rem;
   box-sizing: border-box; /*Retira o comportamento de soma o padding + width 100%*/
 }
+
+@media (max-width: 400px) {
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+  .introducao::before {
+    content: "";
+    display: inline-block;
+    width: 3.75rem;
+    height: 0.25rem;
+    background: #900;
+    position: absolute;
+    top: 17.25rem;
+    right: 0;
+    z-index: 1;
+  }
+  .detalhe {
+    display: none;
+  }
+  .subtitulo {
+    text-align: center;
+  }
+
+  li {
+    margin-bottom: 2rem;
+  }
+  .introducao {
+    text-align: center;
+    justify-items: center;
+  }
+}
