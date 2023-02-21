@@ -25,6 +25,11 @@ img {
 }
 
 ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
   list-style: none;
   display: flex; /*Definir os items como flex retira todas as margens e paddings*/
   flex-wrap: wrap; /*Faz com que os itens sem quebrem quando a tela é menor*/
