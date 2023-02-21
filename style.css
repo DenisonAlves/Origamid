@@ -185,3 +185,9 @@ footer {
     justify-items: center;
   }
 }
+
+@media (max-width: 400px) {
+  .subtitulo {
+    font-size: 2rem;
+  }
+}
